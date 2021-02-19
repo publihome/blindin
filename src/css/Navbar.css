@@ -1,0 +1,185 @@
+@import '../App.css';
+
+
+.navbar {
+    background: var(--blue);
+    height: 60px;
+    /* padding: 0px 30px; */
+    font-size: 18px;
+    align-content: center;
+}
+
+.navbar-ul-rigth {
+    display: flex;
+    margin-right: auto;
+    padding: 0;
+}
+
+
+
+.navbar-ul {
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar-li{
+    text-decoration: none; 
+    color: var(--white);
+    display: flex;
+    margin-left: 13px;
+    
+}
+
+.navbar-li:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.active-link {
+    border-bottom: 2px solid red;
+    /* background: darkblue;  */
+    color: red;
+}
+
+.button-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 450px){
+
+    .container {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .navbar {
+        background: var(--blue);
+        height: auto;
+        padding: 0px 4px;
+        font-size: 18px;
+    }
+    
+        /* align-content: center; */
+    .navbar-ul-rigth {
+        display: flex;
+        /* width: 70%; */
+        padding: 5px;
+        /* margin: 10px;; */
+
+    }
+
+    
+    .navbar-ul {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        padding: 5px;
+        
+    }
+    
+    .navbar-li{
+        text-decoration: none; 
+        color: var(--white);
+        display: block;
+        margin-left: 0px;
+        padding: 2px 0;
+        
+    }
+    
+    .navbar-li:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .active-link {
+        border-bottom: 2px solid red;
+        /* background: darkblue;  */
+        color: red;
+    }
+
+    .button-menu {
+        display: block;
+        /* justify-content: center; */
+        /* margin-right: auto; */
+    }
+
+    .menu-ico {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        color: white;
+    }
+
+    
+
+}
+
+
+
+@media screen and (min-width: 451px) and (max-width: 960px){
+    .container {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .navbar {
+        background: var(--blue);
+        height: auto;
+        padding: 0px 4px;
+        font-size: 18px;
+    }
+    
+        /* align-content: center; */
+    .navbar-ul-rigth {
+        display: flex;
+        /* width: 70%; */
+        padding: 5px;
+        /* margin: 10px;; */
+
+    }
+
+    .navbar-ul {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        padding: 5px;
+        
+    }
+    
+    .navbar-li{
+        text-decoration: none; 
+        color: var(--white);
+        display: block;
+        margin-left: 0px;
+        padding: 2px 0;
+        
+    }
+    
+    .navbar-li:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .active-link {
+        border-bottom: 2px solid red;
+        /* background: darkblue;  */
+        color: red;
+    }
+
+    .button-menu {
+        display: block;
+       
+    }
+
+    .menu-ico {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        color: white;
+    }    
+    
+
+
+}
