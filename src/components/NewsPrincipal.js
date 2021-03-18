@@ -2,16 +2,16 @@ import React, {useState, useEffect} from 'react';
 import '../css/News.css'
 import axios from 'axios'; 
 import noImagen from '../icons/SIN-IMAGEN.jpg' 
-const url = "https://api.blindin.mx/api/primarias" 
 
 function NewsPrincipal(props){
+    const url = `https://api.blindin.mx/api/primarias` 
     const [newsRelevantes, setnewsRelevantes] = useState([]);
     const [page, setPage] = useState(1);
 
 
     const getData = async () => {
         try {
-         const response = await axios.get(`${url}${props.type}?page=${page}`)
+         const response = await axios.get(`${url}${props.type}/${props.region}?page=${page}`)
          const data = await response.data;
          console.log(data)
          if(newsRelevantes === ""){
@@ -24,10 +24,13 @@ function NewsPrincipal(props){
              console.error(error)
          }
     }
+    // props.region ? getData : getData
 
     useEffect(() => {
+        setPage(page +1)
         getData()
     },[]);
+
 
 
    const getMoreData = () => {
@@ -38,7 +41,7 @@ function NewsPrincipal(props){
 
     return (
         <div className="news">
-            {/* {console.log(`) */}
+            {console.log(props)}
             {
             newsRelevantes.map((news) => {
                 return(
@@ -62,7 +65,7 @@ function NewsPrincipal(props){
             
             }
 
-            <button className="btn-see-more" onClick={getMoreData}>Ver más..</button>
+            <button className="btn-see-more" >Ver más..</button>
         </div>
 
     )

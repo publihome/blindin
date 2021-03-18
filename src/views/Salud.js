@@ -3,22 +3,31 @@ import React from 'react';
 // import Video from '../components/Video'
 import NewsSecundarias from '../components/NewsSecundarias';
 import Newsterciarias from '../components/Newsterciarias';
+import Section from '../components/Section'
 
-
-function Salud(){
+function Salud(props){
     const typeNew = "/health";
 
     return(
         <>
             <div className="col-lg-12">
                 {/* <Video/> */}
+            <Section name="Salud"/>
+
             </div>
             <div className="col-lg-7 col-md-7 col-xl-7">
                 {/* <NewsPrincipal type={typeNew} /> */}
-                <NewsSecundarias type={typeNew}/>
+                <NewsSecundarias 
+                    type={typeNew}
+                    region={props.region}
+                />
             </div>
             <div className="col-lg-5 col-md-5 col-xl-5">
-                <Newsterciarias type={typeNew}/>
+                <Newsterciarias 
+                    type={typeNew}
+                    region={props.region}
+
+                />
             </div>
         </>
     );

@@ -1,17 +1,18 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import '../css/News.css'
-const url = "https://api.blindin.mx/api/terciarias"
 
 function Newsterciarias(props){
+    const url = `https://api.blindin.mx/api/terciarias`;
     const [newsterciarias, setNewsTerciarias] = useState([]);
     const [page, setPage] = useState(1);
-    useEffect(() => {
+    useEffect(() => {        
         getData()
+        setPage(page +1)
     },[])
 
     const getData = async() => {
-        const response = await axios.get(`${url}${props.type}?page=${page}`)
+        const response = await axios.get(`${url}${props.type}/${props.region}?page=${page}`)
         const data = response.data;
         console.log(response)
         if(newsterciarias === ""){
@@ -28,7 +29,7 @@ function Newsterciarias(props){
 
     return(
         <div className="news">
-            { console.log(newsterciarias)}            
+            {/* { console.log(newsterciarias)}             */}
             <div className ="row">
             {
                 newsterciarias.map((news) => {

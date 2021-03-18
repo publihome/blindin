@@ -1,53 +1,226 @@
 @import '../App.css';
 
+.navbar-head {
+    display: flex;
+    background: var(--white);
+    height: 81px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: auto;
+    margin: auto;
+}
+
+.title-head {
+    color: var(--white);
+    text-align: center;
+    margin: 0px;
+    font-family: cursive;
+}
+
+.btns-region{
+    display: flex;
+}
+
+.ul-top{
+    display: flex;
+    margin: 0px;
+    margin-left: auto;
+}
+
+.navbar-li-region{
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: none;
+}
+
+.btn-active-region{
+    background: var(--gray);
+    border: none;
+}
 
 .navbar {
-    background: var(--blue);
-    height: 60px;
-    /* padding: 0px 30px; */
-    font-size: 18px;
-    align-content: center;
-}
-
-.navbar-ul-rigth {
+    background: var(--white);
     display: flex;
-    margin-right: auto;
-    padding: 0;
+    font-size: 18px;
+    padding: 0px;
+    border-bottom: 1px solid #00000031;
 }
-
-
 
 .navbar-ul {
+    padding: 0px;
     display: flex;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
 }
 
-.navbar-li{
-    text-decoration: none; 
-    color: var(--white);
-    display: flex;
-    margin-left: 13px;
+.drop-menu{
+    display: contents;
     
 }
 
-.navbar-li:hover{
-    color: red;
-    cursor: pointer;
+
+.navbar-li{
+    text-decoration: none;
+    display: flex;
+    width: -webkit-fill-available;
+    /* padding: 5px 0px; */
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #00000054;
 }
 
-.active-link {
-    border-bottom: 2px solid red;
-    /* background: darkblue;  */
-    color: red;
+/* 
+#recientes  p{
+    color: var(--recientesColor);
 }
+
+#salud  p{
+    color: var(--saludColor);;
+}
+
+#economia  p{
+    color: var(--economiaColor);
+}
+
+#deportes  p{
+    color: var(--deportesColor);
+}
+
+#covid  p{
+    color: var(--covidColor);
+} */
+
+
+
+
+
+.navbar-li  p{
+    padding: 5px 0px;
+    margin: 0;
+
+}
+
+.navbar-li  i{
+    padding: 5px;
+
+}
+.navbar-li :hover{
+    /* padding: 5px 0px; */
+    margin: 0;
+    color: black;
+
+}
+
+.navbar-li >p:hover{
+    cursor: pointer;
+    color: black ;
+}
+
+#recientes:hover{
+    background: var(--recientesColor);
+}
+
+#salud:hover{
+    background: var(--saludColor);
+}
+
+#economia:hover{
+    background: var(--economiaColor);
+}
+
+#deportes:hover{
+    background: var(--deportesColor);
+}
+
+#covid:hover{
+    background: var(--covidColor);
+}
+
+
+.active-link-recientes {
+    background: var(--recientesColor); 
+    color: var(--white);
+}
+
+.active-link-salud {
+    background:var(--saludColor); 
+    color: var(--white);
+}
+
+.active-link-economia {
+    background:var(--economiaColor); 
+    color: var(--white);
+}
+
+.active-link-deportes {
+    background:var(--deportesColor); 
+    color: var(--white);
+}
+
+.active-link-covid {
+    background:var(--covidColor); 
+    color: var(--white);
+}
+
 
 .button-menu {
     display: none;
 }
 
-@media only screen and (max-width: 450px){
+
+/* navbar2 */
+
+
+.input-search{
+    width: 350px;
+    border-radius: 20px;
+    height: 35px;
+    padding: 15px;
+    border: 1px solid var(--input);
+    background: var(--input);
+    position: relative;
+}
+
+/* .navbar-info ul{
+    border: 1px solid;
+
+} */
+
+.search-container{
+    display: flex;
+    align-items: center;
+}
+
+.input-search:focus{
+    outline: none;
+}
+
+.btn-search{
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+
+}
+
+.btn-search:hover{
+    background: var(--gray);
+    
+}
+
+.covid-ico{
+    width: 25px;
+    height: 25px;
+}
+
+
+@media only screen and (max-width: 575.98px){
 
     .container {
         padding: 0px;
@@ -57,19 +230,10 @@
     .navbar {
         background: var(--blue);
         height: auto;
-        padding: 0px 4px;
-        font-size: 18px;
-    }
-    
-        /* align-content: center; */
-    .navbar-ul-rigth {
-        display: flex;
-        /* width: 70%; */
         padding: 5px;
-        /* margin: 10px;; */
-
+        font-size: 18px;
+        border: none
     }
-
     
     .navbar-ul {
         display: block;
@@ -85,61 +249,56 @@
         display: block;
         margin-left: 0px;
         padding: 2px 0;
+        border: none
         
     }
     
-    .navbar-li:hover{
-        color: red;
-        cursor: pointer;
-    }
-    
-    .active-link {
-        border-bottom: 2px solid red;
-        /* background: darkblue;  */
-        color: red;
-    }
-
     .button-menu {
-        display: block;
-        /* justify-content: center; */
-        /* margin-right: auto; */
+        display: flex;
+        width: 25px;
+        height: 25px;
+        margin: 2px;
+        margin-left: auto;
+     
     }
 
     .menu-ico {
-        width: 40px;
-        height: 40px;
-        margin: 5px;
-        color: white;
-    }
+        width: 25px;
+        height: 25px;
+        margin-left: auto;
+    } 
 
-    
+
+    .input-search{
+        width: 85%;
+        height: 40px;
+
+    }
 
 }
 
 
-
-@media screen and (min-width: 451px) and (max-width: 960px){
-    .container {
-        padding: 0px;
-        margin: 0px;
-    }
+@media (min-width: 576px) and (max-width: 767.98px){
+    
 
     .navbar {
         background: var(--blue);
         height: auto;
-        padding: 0px 4px;
+        padding: 5px;
         font-size: 18px;
+        border: none
     }
     
         /* align-content: center; */
     .navbar-ul-rigth {
-        display: flex;
+        display: block;
         /* width: 70%; */
         padding: 5px;
-        /* margin: 10px;; */
+        margin: 0px;
 
     }
 
+    
     .navbar-ul {
         display: block;
         flex-direction: column;
@@ -154,32 +313,35 @@
         display: block;
         margin-left: 0px;
         padding: 2px 0;
+        border: none
         
     }
     
-    .navbar-li:hover{
-        color: red;
-        cursor: pointer;
-    }
-    
-    .active-link {
-        border-bottom: 2px solid red;
-        /* background: darkblue;  */
-        color: red;
-    }
-
     .button-menu {
-        display: block;
-       
+        display: flex;
+        width: 25px;
+        height: 25px;
+        margin: 2px;
+        margin-left: auto;
+     
     }
 
     .menu-ico {
-        width: 40px;
+        width: 25px;
+        height: 25px;
+        margin-left: auto;
+    } 
+
+
+    .input-search{
+        width: 85%;
         height: 40px;
-        margin: 5px;
-        color: white;
-    }    
+
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
     
-
-
 }

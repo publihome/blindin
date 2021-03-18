@@ -2,22 +2,23 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../css/News.css'
 // import Add from '../components/Add' 
-const url = "https://api.blindin.mx/api/secundarias"; 
 
 function NewsSecundarias(props){
+    const url = `https://api.blindin.mx/api/secundarias`; 
 
     const [secondaryNews, setSecondaryNews] = useState([]);
     const [page, setPage] = useState(1);
 
     useEffect(() => {
         getData();
+        setPage(page + 1)
     },[])
 
 
     const getData = async () => {
-        console.log("data")
-        const response = await axios.get(`${url}${props.type}?page=${page}`)
-        console.log(response)
+        // console.log("data")
+        const response = await axios.get(`${url}${props.type}/${props.region}?page=${page}`)
+        // console.log(response)
         const data = response.data;
        if(secondaryNews === ""){
             setSecondaryNews(data.data)
