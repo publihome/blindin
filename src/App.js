@@ -67,8 +67,9 @@ function App() {
       />
       <Add
         position="top"
-        img="http://controversia-oax.com.mx/wp-content/uploads/2021/02/NEC_950x100-scaled.jpg"
-        url = "https://www.oaxaca.gob.mx/smo/"
+        img = "https://sspo.gob.mx/wp-content/uploads/2021/01/cropped-ssp-pagina-e-02.png"
+        url= "https://sspo.gob.mx/"
+        
       />
       <hr />
       <Navbar2
@@ -125,8 +126,8 @@ function App() {
         </div>
       </div>
       <Add 
-      img = "https://sspo.gob.mx/wp-content/uploads/2021/01/cropped-ssp-pagina-e-02.png"
-      url= "https://sspo.gob.mx/"
+      img="http://controversia-oax.com.mx/wp-content/uploads/2021/02/NEC_950x100-scaled.jpg"
+      url = "https://www.oaxaca.gob.mx/smo/"
       />
       {/* </div> */}
     </Router>
