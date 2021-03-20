@@ -40,14 +40,14 @@ function NewsSecundarias(props){
                 secondaryNews.map((news) => {
                     return(
                         <div className="target" key={news.id}>
-                            <a href={news.url} className="a">
+                            <a href={news.url} className="a" target="_blank">
                             <div className="flex-target" >
                                 <div className="imagen-secondary" >
                                     <img src={news.img} alt={news.titulo} className="secondary-img"/>
                                 </div>
                                 <div className="content-secondary">
                                     <h3>{news.titulo}</h3>
-                                    <p>{news.resumen} <a href={news.url} className="link-secondary">leer más...</a></p>                                    
+                                    <p>{news.resumen} <a href={news.url} target="_blank" className="link-secondary">leer más...</a></p>                                    
                                 </div>
                             </div>
                             </a>

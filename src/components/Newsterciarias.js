@@ -29,17 +29,18 @@ function Newsterciarias(props){
 
     return(
         <div className="news">
+            {getData}
             {/* { console.log(newsterciarias)}             */}
             <div className ="row">
             {
                 newsterciarias.map((news) => {
                     return(
                         <div className="col-md-6" key={news.id}>
-                            <a href={news.url}>
+                            <a href={news.url} target="_blank">
                             <div className="card-new">
                                 <div className="target-terciaria">
-                                    <img src={news.img} className="imagen-terciaria" alt={news.titulo}/>
-                                    <h3 className="titulo-terciario">{news.titulo} <a href={news.url} className="link">Leer más....</a></h3>
+                                    <img decoding="async" src={news.img} className="imagen-terciaria" alt={news.titulo}/>
+                                    <h3 className="titulo-terciario">{news.titulo} <a href={news.url} target="_blank" className="link">Leer más....</a></h3>
                                 </div>
                             </div>   
                             </a>

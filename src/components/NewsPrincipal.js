@@ -41,11 +41,12 @@ function NewsPrincipal(props){
 
     return (
         <div className="news">
-            {console.log(props)}
+            {/* {console.log(props)} */}
             {
             newsRelevantes.map((news) => {
                 return(
                     <div className="target" key={news.id}>
+                        {props.region != props.region ? getData : "" }
                         <div className="frame">
                             <img src={news.img === "without image" ?  noImagen : news.img } alt={news.titulo} className="image-new" />
                         </div>
@@ -57,7 +58,7 @@ function NewsPrincipal(props){
                             </div> 
                             <p className="resumen">{news.resumen}</p>
                             <p>{news.author}</p>
-                            <a href={news.url} className="btn-more-principal" >Saber más</a>
+                            <a href={news.url} target="_blank" className="btn-more-principal" >Saber más</a>
                         </div>
                     </div>
                 )

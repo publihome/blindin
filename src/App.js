@@ -28,11 +28,8 @@ function App() {
   }
 
   const setWordSearch = (word) => {
-    if(word == word){
       setWord(word);
-      setPage(1)
-      setnewsData([])
-    }
+    
   }
 
   const searchNew = async () => {
@@ -70,29 +67,34 @@ function App() {
       />
       <Add
         position="top"
+        img="http://controversia-oax.com.mx/wp-content/uploads/2021/02/NEC_950x100-scaled.jpg"
+        url = "https://www.oaxaca.gob.mx/smo/"
       />
       <hr />
       <Navbar2
         setWordSearch={setWordSearch}
         searchNew={searchNew}
       />
+      <Add
+        position="left"
+      />
 
-      <div className="container-lg">
+      <Add
+        position="right"
+      />
+      <div className="container-lg container-md">
         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div className="row">
-            <Add
-                  position="left"
-                  /> 
-
-            <Add
-                  position="right"
-                  />
+            
             {/* {console.log(newsData)} */}
+            { newsData.length != 0 ? 
                <NewsSearch 
                  news={newsData}
                 searchNew={searchNew} 
-                /> 
-
+                />
+                :
+                "" 
+            }
             <Route path="/Deportes" >
               <Deportes
                 region={region}
@@ -122,7 +124,10 @@ function App() {
           </div>
         </div>
       </div>
-      <Add />
+      <Add 
+      img = "https://sspo.gob.mx/wp-content/uploads/2021/01/cropped-ssp-pagina-e-02.png"
+      url= "https://sspo.gob.mx/"
+      />
       {/* </div> */}
     </Router>
 

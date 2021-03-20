@@ -277,6 +277,17 @@ h5{
 
     }
 
+    .btn-more-news{
+        display: block;
+        width: 100%;
+        margin: auto;
+        background: var(--blue);
+        color: var(--white);
+        border-radius: 7px;
+        padding: 5px;
+        border: transparent;
+    }
+
     .frame {
         width: 100%;
         height: 200px;
@@ -336,7 +347,7 @@ h5{
         text-align: center;
         box-sizing: border-box;
         border-radius: 10px;
-        color: var(--gray);
+        color: var(--white);
         border: transparent;
 
     }
@@ -395,7 +406,7 @@ h5{
     .btn-see-more:hover{
         /* animation-name: fill-butom;
         animation-duration: .2s; */
-        background-color: var(--black);
+        background: var(--blue);
         color: var(--white);
         border: transparent;
 
@@ -469,6 +480,7 @@ h5{
         margin-bottom: 10px;
         border-radius: 17px;
         background: var(--white);
+        width: 100%;
     }
 
     .frame {
@@ -517,7 +529,7 @@ h5{
     .btn-more-principal:hover{
         text-decoration: none ;
         color: var(--white);
-        background-color: var(--black);
+        background-color: var(--blue);
         border: transparent;
 
 
@@ -587,7 +599,7 @@ h5{
     .btn-see-more:hover{
         /* animation-name: fill-butom;
         animation-duration: .2s; */
-        background-color: var(--black);
+        background-color: var(--blue);
         color: var(--white);
         border: transparent;
 

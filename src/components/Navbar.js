@@ -19,12 +19,16 @@ function Navbar(props){
                 </NavLink>          
                 <div className="btns-region">
                     <ul className="ul-top">
-                        <button className="navbar-li-region" className={regionActive == "oaxaca" ? "btn-active-region" : "navbar-li-region"} id="Oaxaca" onClick={()=>{props.changeRegion("oaxaca"); setRegionActive("oaxaca")}} >
-                            Oaxaca
-                        </button>
-                        <button className="navbar-li-region"  className={regionActive == "mexico" ? "btn-active-region" : "navbar-li-region"} id="nacional" onClick={()=>{props.changeRegion("nacional"); setRegionActive("mexico")}} >
-                            México
-                        </button>
+                        <NavLink to="/">
+                            <button className="navbar-li-region" className={regionActive == "oaxaca" ? "btn-active-region" : "navbar-li-region"} id="Oaxaca" onClick={()=>{props.changeRegion("oaxaca"); setRegionActive("oaxaca")}} >
+                                Oaxaca
+                            </button>
+                        </NavLink>
+                        <NavLink to="/">
+                            <button className="navbar-li-region"  className={regionActive == "mexico" ? "btn-active-region" : "navbar-li-region"} id="nacional" onClick={()=>{props.changeRegion("nacional"); setRegionActive("mexico")}} >
+                                México
+                            </button>
+                        </NavLink>
                     </ul>
                 </div>
             </div>
@@ -81,7 +85,6 @@ function Navbar(props){
                             </NavLink>
                         </li>
                 </div>
-                
                     </ul>
 
                     </div>

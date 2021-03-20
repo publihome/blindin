@@ -33,9 +33,24 @@
 
 .navbar-li-region{
     display: block;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: none;
+    padding: 5px;
+    border: 1px solid var(--gray);
+    background: var(--white);
+}
+
+#Oaxaca{
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    padding: 5px;
+    font-size: 14px;
+
+}
+
+#nacional{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 5px;
+    font-size: 14px;
 }
 
 .btn-active-region{
@@ -185,6 +200,7 @@
     border: 1px solid var(--input);
     background: var(--input);
     position: relative;
+    margin-right: 10px;
 }
 
 /* .navbar-info ul{
@@ -267,6 +283,18 @@
         height: 25px;
         margin-left: auto;
     } 
+    .search-container{
+        
+    }
+
+    .btn-search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        padding: 20px;
+
+    }
 
 
     .input-search{

@@ -10,11 +10,11 @@ function Deportes(props){
     const typeNew = "/sports";
     return(
         <>
-            <div className="col-lg-12">
+            <div className="col-lg-12 col-xl-10">
                 {/* <Video/> */}
             <Section name="Deportes"/>
             </div>
-            <div className="col-lg-7 col-md-5 col-xl-7 col-sm-12 col-12">
+            <div className="col-lg-7 col-md-5 col-xl-7 col-sm-12 ">
                 <NewsPrincipal
                  type={typeNew} 
                  region={props.region}

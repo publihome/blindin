@@ -11,12 +11,9 @@ function Recientes(props){
     const typeNew = "";
 
     return(
-
         <>
-
             <div className="col-lg-12">
             {/* {console.log(props)} */}
-
                 {/* <Video/> */}
             <Section name="Recientes"/>
             </div>
