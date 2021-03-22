@@ -90,30 +90,6 @@
     border: 1px solid #00000054;
 }
 
-/* 
-#recientes  p{
-    color: var(--recientesColor);
-}
-
-#salud  p{
-    color: var(--saludColor);;
-}
-
-#economia  p{
-    color: var(--economiaColor);
-}
-
-#deportes  p{
-    color: var(--deportesColor);
-}
-
-#covid  p{
-    color: var(--covidColor);
-} */
-
-
-
-
 
 .navbar-li  p{
     padding: 5px 0px;
@@ -308,7 +284,9 @@
 
 @media (min-width: 576px) and (max-width: 767.98px){
     
-
+    .container{
+         max-width: 100%;
+    }
     .navbar {
         background: var(--blue);
         height: auto;

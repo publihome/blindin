@@ -325,7 +325,15 @@ h5{
         padding: 12px;
 
     }
+    .title > h4{
+        font-size: 16px;
 
+    }
+
+    .title > p{
+        font-size: 13px;
+
+    }
 
     .title-principal > h3 {
         font-size: 16px;
@@ -466,6 +474,10 @@ h5{
         padding: 4px;
         margin: 0px;
         background:#000000b8;
+    }
+
+    .container {
+        max-width: 100%;
     }
 
 

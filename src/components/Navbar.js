@@ -41,7 +41,7 @@ function Navbar(props){
                     <img src={menuIsVisible ? Menuiconx : Menuicon} alt="" class="menu-ico" onClick={() => {setMenuVisible(!menuIsVisible)}}/>
                 </div>
                     <ul className="navbar-ul">
-                <div className={window.innerWidth > 960 ? 'drop-menu' : menuIsVisible ? 'd-block' : 'd-none' }>
+                <div className={window.innerWidth > 960 ? 'drop-menu' : menuIsVisible ? 'd-block' : 'd-none ' }>
                         <li className="navbar-li" id="recientes">
                             <NavLink to="/"exact activeClassName="active-link-recientes" className="navLink" onClick={() =>{ props.removeValuesState(); setMenuVisible(false)}} className="navbar-li">
                                 <p> <i class="far fa-clock"></i>Recientes</p>

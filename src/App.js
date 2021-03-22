@@ -83,7 +83,7 @@ function App() {
       <Add
         position="right"
       />
-      <div className="container-lg container-md">
+      <div className="container-lg container-md container">
         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div className="row">
             
