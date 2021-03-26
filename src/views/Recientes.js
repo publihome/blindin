@@ -4,11 +4,12 @@ import NewsPrincipal from '../components/NewsPrincipal'
 import NewsSecundarias from '../components/NewsSecundarias';
 import Newsterciarias from '../components/Newsterciarias';
 import Section from '../components/Section'
-
+import UseTitle from '../hooks/UseTitle';
 
 function Recientes(props){
 
     const typeNew = "";
+    UseTitle({title: "Recientes"})
 
     return(
         <>

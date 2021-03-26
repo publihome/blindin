@@ -4,7 +4,7 @@ import {NavLink, Link} from 'react-router-dom';
 import Menuicon from '../icons/menu.svg'
 import Menuiconx from '../icons/menux.svg'
 import logo from '../blindin_logo.png';
-import covidImage from '../icons/covid-image.png' 
+import Add from '../components/Add'
 
 function Navbar(props){
     const [menuIsVisible, setMenuVisible] = useState(false);
@@ -39,6 +39,14 @@ function Navbar(props){
             <div className="container">
                 <div className="button-menu ">
                     <img src={menuIsVisible ? Menuiconx : Menuicon} alt="" class="menu-ico" onClick={() => {setMenuVisible(!menuIsVisible)}}/>
+                {/* {window.innerWidth < 960 ?
+                 <Add 
+                    position="center"
+                    img = "https://www.oaxaca.gob.mx/wp-content/uploads/2020/09/banner-OaxacaNuevaImagen.png"
+                    url= "https://sspo.gob.mx/"
+                 />
+                : ""
+                } */}
                 </div>
                     <ul className="navbar-ul">
                 <div className={window.innerWidth > 960 ? 'drop-menu' : menuIsVisible ? 'd-block' : 'd-none ' }>

@@ -4,11 +4,13 @@ import React from 'react';
 import NewsSecundarias from '../components/NewsSecundarias';
 import Newsterciarias from '../components/Newsterciarias';
 import Section from '../components/Section'
+import UseTitle from '../hooks/UseTitle';
 
 function Salud(props){
     const typeNew = "/health";
-
+    UseTitle({title: "Salud"})
     return(
+    
         <>
             <div className="col-lg-12">
                 {/* <Video/> */}

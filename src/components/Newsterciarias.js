@@ -39,7 +39,7 @@ function Newsterciarias(props){
                             <a href={news.url} target="_blank">
                             <div className="card-new">
                                 <div className="target-terciaria">
-                                    <img decoding="async" src={news.img} className="imagen-terciaria" alt={news.titulo}/>
+                                    <img src={news.img} className="imagen-terciaria" alt={news.titulo}/>
                                     <h3 className="titulo-terciario">{news.titulo} <a href={news.url} target="_blank" className="link">Leer más....</a></h3>
                                 </div>
                             </div>   

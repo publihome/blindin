@@ -4,10 +4,11 @@ import React from 'react';
 import NewsSecundarias from '../components/NewsSecundarias';
 import Newsterciarias from '../components/Newsterciarias';
 import Section from '../components/Section';
-
+import UseTitle from '../hooks/UseTitle' 
 
 function Economia(props) {
     const typeNew = "/economy";
+    UseTitle({title: "Economía"})
 
     return(
         <>

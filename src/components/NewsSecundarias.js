@@ -35,7 +35,8 @@ function NewsSecundarias(props){
 
     return (
         <div className="secondary-news">
-            {console.log(secondaryNews)}
+            {getData}
+            {/* {console.log(secondaryNews)} */}
             {
                 secondaryNews.map((news) => {
                     return(

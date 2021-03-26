@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import CovidChart from '../components/CovidChart'
-
+import UseTitle from '../hooks/UseTitle';
 
 function Covid(){
+    UseTitle({title: "Covid"})
+
     // const [covidData, setCovidData ] = useState([]);
 
 

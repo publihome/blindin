@@ -8,6 +8,18 @@
     width: 700px;
     height: 70px;
     margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    object-fit: contain;
+    background: white;
+    
+}
+
+.add-target-center {
+    display: block; 
+    width: 700px;
+    height: 70px;
+    margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     object-fit: contain;
@@ -25,7 +37,7 @@
 }
 
 #top {
-    object-fit: fill;
+    object-fit: contain;
     height: inherit;
     width: inherit;
     padding: 5px;
@@ -113,13 +125,15 @@
 
     .add-target {
         display: block;
+        width: 100%;
+        height: 80px;
+    }
+
+    .add-target-center {
+        display: block;
         margin: 5px;
         width: 100%;
         height: 80px;
-        /* position: fixed; */
-        top: 2px;
-        /* z-index: 100px */
-        
     }
 
     #top {

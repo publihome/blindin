@@ -35,6 +35,11 @@ hr{
     /* display: none; */
   }
 
+  hr{
+    margin-top: 10px;
+  height: 5px;
+  }
+
 
 
 

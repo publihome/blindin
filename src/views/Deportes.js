@@ -4,10 +4,12 @@ import NewsPrincipal from '../components/NewsPrincipal'
 import NewsSecundarias from '../components/NewsSecundarias';
 import Newsterciarias from '../components/Newsterciarias';
 import Section from '../components/Section';
+import UseTitle from '../hooks/UseTitle';
 
 
 function Deportes(props){
     const typeNew = "/sports";
+    UseTitle({title: "Deportes"})
     return(
         <>
             <div className="col-lg-12 col-xl-10">

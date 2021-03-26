@@ -40,7 +40,6 @@ function App() {
 
     }
     setPage(page + 1)
-
   }
 
   const setNews = (response) => {
@@ -67,7 +66,7 @@ function App() {
       />
       <Add
         position="top"
-        img = "https://sspo.gob.mx/wp-content/uploads/2021/01/cropped-ssp-pagina-e-02.png"
+        img = "https://www.oaxaca.gob.mx/wp-content/uploads/2020/09/banner-OaxacaNuevaImagen.png"
         url= "https://sspo.gob.mx/"
         
       />
@@ -76,13 +75,7 @@ function App() {
         setWordSearch={setWordSearch}
         searchNew={searchNew}
       />
-      <Add
-        position="left"
-      />
-
-      <Add
-        position="right"
-      />
+      
       <div className="container-lg container-md container">
         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div className="row">
