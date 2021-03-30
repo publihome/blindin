@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import '../css/Navbar.css';
 import {NavLink, Link} from 'react-router-dom';
-import Menuicon from '../icons/menu.svg'
-import Menuiconx from '../icons/menux.svg'
 import logo from '../blindin_logo.png';
-import Add from '../components/Add'
+import {AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { IconContext } from 'react-icons'
 
 function Navbar(props){
     const [menuIsVisible, setMenuVisible] = useState(false);
@@ -17,7 +16,25 @@ function Navbar(props){
                 <NavLink to="/">
                     <img src={logo} alt="logo" className="logo" />
                 </NavLink>          
-                <div className="btns-region">
+                <div className="button-menu " onClick={() => {setMenuVisible(!menuIsVisible)}}>
+                    <IconContext.Provider value={{ size: "2em"}}>
+                    { menuIsVisible ? 
+                        <AiOutlineClose /> 
+                        :
+                         <AiOutlineMenu/>    
+                    }
+                    </IconContext.Provider>
+                {/* {window.innerWidth < 960 ?
+                 <Add 
+                    position="center"
+                    img = "https://www.oaxaca.gob.mx/wp-content/uploads/2020/09/banner-OaxacaNuevaImagen.png"
+                    url= "https://sspo.gob.mx/"
+                 />
+                : ""
+                } */}
+                </div>
+
+                {/* <div className="btns-region">
                     <ul className="ul-top">
                         <NavLink to="/">
                             <button className="navbar-li-region" className={regionActive == "oaxaca" ? "btn-active-region" : "navbar-li-region"} id="Oaxaca" onClick={()=>{props.changeRegion("oaxaca"); setRegionActive("oaxaca")}} >
@@ -30,24 +47,13 @@ function Navbar(props){
                             </button>
                         </NavLink>
                     </ul>
-                </div>
+                </div> */}
             </div>
 
         </nav>
 
         <nav className="navbar">
             <div className="container">
-                <div className="button-menu ">
-                    <img src={menuIsVisible ? Menuiconx : Menuicon} alt="" class="menu-ico" onClick={() => {setMenuVisible(!menuIsVisible)}}/>
-                {/* {window.innerWidth < 960 ?
-                 <Add 
-                    position="center"
-                    img = "https://www.oaxaca.gob.mx/wp-content/uploads/2020/09/banner-OaxacaNuevaImagen.png"
-                    url= "https://sspo.gob.mx/"
-                 />
-                : ""
-                } */}
-                </div>
                     <ul className="navbar-ul">
                 <div className={window.innerWidth > 960 ? 'drop-menu' : menuIsVisible ? 'd-block' : 'd-none ' }>
                         <li className="navbar-li" id="recientes">

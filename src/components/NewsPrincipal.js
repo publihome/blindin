@@ -13,7 +13,7 @@ function NewsPrincipal(props){
         try {
          const response = await axios.get(`${url}${props.type}/${props.region}?page=${page}`)
          const data = await response.data;
-            // console.log(data)
+         console.log(data)
          if(newsRelevantes === ""){
              setnewsRelevantes(data.data);
          }else{
@@ -37,7 +37,7 @@ function NewsPrincipal(props){
 
     return (
         <div className="news">
-            {console.log(newsRelevantes)}
+            {/* {props.region ? } */}
             {
             newsRelevantes.map((news) => {
                 return(
