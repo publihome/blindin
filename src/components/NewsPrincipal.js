@@ -23,6 +23,7 @@ function NewsPrincipal(props){
              console.error(error)
          }
     }
+
     // props.region ? getData : getData
     useEffect(() => {
         setPage(page +1)

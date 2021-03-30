@@ -7,11 +7,12 @@ import Deportes from './views/Deportes'
 import Economia from './views/Economia';
 import Salud from './views/Salud';
 import Add from './components/Add';
-import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Covid from './views/Covid';
 import Navbar2 from './components/Navbar2';
 import axios from 'axios';
 import NewsSearch from './components/NewsSearch'
+import Adds from './components/Adds'
 
 
 function App() {
@@ -19,8 +20,25 @@ function App() {
   const [newsData, setnewsData] = useState([]);
   const [page, setPage] = useState(1);
   const [word, setWord] = useState();
+  const [adds, setAdds] = useState([]);
+
 
   const base_url = "https://api.blindin.mx/api/search/"
+  const addUrl = "https://api.blindin.mx/api/anuncios/"
+  
+  const getAnuncios = async () => {
+    try{
+        const response= await axios.get(addUrl);
+        setAdds(response.data)
+
+    }catch (error) {
+        console.error(error)
+    }
+} 
+
+useEffect(()=>{
+  getAnuncios()
+},[])
 
 
   const changeRegion = (reg) => {
@@ -68,14 +86,16 @@ function App() {
         position="top"
         img = "https://www.oaxaca.gob.mx/wp-content/uploads/2020/09/banner-OaxacaNuevaImagen.png"
         url= "https://sspo.gob.mx/"
-        
       />
+      {
+       adds ? <Adds adds={adds}/> : ""
+     }
+     
       <hr />
       <Navbar2
         setWordSearch={setWordSearch}
         searchNew={searchNew}
       />
-      
       <div className="container-lg container-md container">
         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div className="row">
@@ -118,10 +138,12 @@ function App() {
           </div>
         </div>
       </div>
-      <Add 
+       {/* <Add 
       img="http://controversia-oax.com.mx/wp-content/uploads/2021/02/NEC_950x100-scaled.jpg"
       url = "https://www.oaxaca.gob.mx/smo/"
-      />
+      position={"down"} 
+      />  */}
+      {/* <Adds/> */}
       {/* </div> */}
     </Router>
 
