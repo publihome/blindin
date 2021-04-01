@@ -7,36 +7,61 @@ import { Carousel } from 'react-responsive-carousel';
 function Adds(props){
     return(
         <>
-            {/* {
-            console.log(props.adds)
-            }
-            { 
-            props.adds 
-            ?
-                props.adds.map(add => (
-                        <Add
-                            id={add.id}
-                            position={add.position}
-                            img={add.image}
-                            url={add.url}
-                        />
-                ))
-            :
-            ""
-            
-            } */}
+        {console.log(props)}
+        
+                {
+               props.position == "top" ? 
+                 <Carousel 
+                    autoPlay={true}
+                    infiniteLoop={true}
+                    showThumbs={false}
+                    interval={3000}
+                    showArrows={false}
+                    showStatus={false}
+                    showIndicators={false}
+                    >
+                    { props.adds.map(add => (
+                         <a target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
+                         <div className={add.position === "top" ? "add-target" 
+                                         : add.position === "center" ? "add-target-center"
+                                         : add.position ==="down" ? "add-target-bottom" : ""} > 
+                                 <img src={ add.image ? add.image : "https://somoslocales.mx/wp-content/uploads/2020/05/Recurso-36.png"} alt="publicidad" className="img-add" id={add.position}/> 
+                         </div>
+                         </a>
+                    ))
+                 }
+                 </Carousel>
+                // props.adds.map(add => (
+                //     <p>{add.nombreMarca}</p>
+                // ))
+               
+                    : props.position == "down" ? 
 
-            {
-                props.adds.map(add => (
-                    <a target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"}>
-                    <div className={add.position ==="top" ? "add-target" 
-                                    : add.position ==="center" ? "add-target-center"
-                                    : add.position ==="down" ? "add-target-bottom" : ""} > 
-                            <img src={ add.image ? add.image : "https://somoslocales.mx/wp-content/uploads/2020/05/Recurso-36.png"} alt="publicidad" className="img-add" id={add.position}/> 
-                    </div>
-                    </a>
-                ))
-            }
+                    <Carousel 
+                        autoPlay={true}
+                        infiniteLoop={true}
+                        showThumbs={false}
+                        interval={3000}
+                        showArrows={false}
+                        showStatus={false}
+                        showIndicators={false}
+                        stopOnHover={false}
+                    >
+                    { props.adds.map(add => (
+                         <a target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
+                         <div className={add.position === "top" ? "add-target" 
+                                         : add.position === "center" ? "add-target-center"
+                                         : add.position ==="down" ? "add-target-bottom" : ""} > 
+                                 <img src={ add.image ? add.image : "https://somoslocales.mx/wp-content/uploads/2020/05/Recurso-36.png"} alt="publicidad" className="img-add" id={add.position}/> 
+                         </div>
+                         </a>
+                    ))
+                    }
+                    </Carousel>
+                    : ""
+                }
+
+                 
         </>
     )
 

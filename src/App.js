@@ -20,24 +20,32 @@ function App() {
   const [newsData, setnewsData] = useState([]);
   const [page, setPage] = useState(1);
   const [word, setWord] = useState();
-  const [adds, setAdds] = useState([]);
-
+  const [addsTop, setAddsTop] = useState([]);
+  const [addsbottom, setAddsbottom] = useState([]);
+  
 
   const base_url = "https://api.blindin.mx/api/search/"
-  const addUrl = "https://api.blindin.mx/api/anuncios/"
+  const addUrl = "http://api.blindin.mx/api/adds"
   
-  const getAnuncios = async () => {
+  const getAdds = async (ubication) => {
     try{
-        const response= await axios.get(addUrl);
-        setAdds(response.data)
+        const response= await axios.get(`${addUrl}/${ubication}`);
+        if(ubication == "top"){
+          setAddsTop(response.data)
+        }
 
+        if(ubication == "down"){
+          setAddsbottom(response.data)
+        }
     }catch (error) {
         console.error(error)
     }
 } 
 
+
 useEffect(()=>{
-  getAnuncios()
+  getAdds("top")
+  getAdds("down")
 },[])
 
 
@@ -82,15 +90,7 @@ useEffect(()=>{
         changeRegion={changeRegion}
         removeValuesState={removeValuesState}
       />
-      <Add
-        position="top"
-        img = "https://www.oaxaca.gob.mx/wp-content/uploads/2020/09/banner-OaxacaNuevaImagen.png"
-        url= "https://sspo.gob.mx/"
-      />
-      {
-       adds ? <Adds adds={adds}/> : ""
-     }
-     
+       <Adds adds={addsTop} position={"top"}/> 
       <hr />
       <Navbar2
         setWordSearch={setWordSearch}
@@ -137,14 +137,9 @@ useEffect(()=>{
             </Route>
           </div>
         </div>
+      <Adds adds={addsbottom} position={"down"}/> 
       </div>
-       {/* <Add 
-      img="http://controversia-oax.com.mx/wp-content/uploads/2021/02/NEC_950x100-scaled.jpg"
-      url = "https://www.oaxaca.gob.mx/smo/"
-      position={"down"} 
-      />  */}
-      {/* <Adds/> */}
-      {/* </div> */}
+
     </Router>
 
   );

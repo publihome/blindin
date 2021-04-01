@@ -59,11 +59,17 @@
     height: 70px;
     /* border: 1px solid rgba(0, 0, 0, 0.13); */
     background: white;
-    position: fixed;
+    /* position: fixed;
     bottom: 0px;
-    left: 20%;
+    left: 20%; */
     
 
+}
+
+.carousel-root:last-child {
+    position: fixed;
+    bottom: 0px;
+    right: -750px;
 }
 
 /* #left{
@@ -133,6 +139,12 @@
         height: 80px;
     }
 
+    .carousel-root:last-child {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+}
+
     .add-target-center {
         display: block;
         margin: 5px;
@@ -150,32 +162,8 @@
         margin: 0;
         width: 100%;
         height: 50px;
-        position: fixed;
-        bottom: 0px
     }
     
-    
-    .add-target-left {
-        display: none; 
-        width: 200px;
-        max-width: 200px;
-        height: 60vh;
-        position: fixed;
-        left: 3px;
-        top: 20%;
-        z-index: 100px;
-    }
-    
-    .add-target-right {
-        display: none; 
-        width: 200px;
-        max-width: 200px;
-        height: 60vh;
-        position: fixed;
-        right: 3px;
-        top: 20%;
-        z-index: 100px;
-    }
     .img {
         object-fit: cover;
         /* width: 200px; */
