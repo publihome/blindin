@@ -43,15 +43,7 @@ function NewsPrincipal(props){
             newsRelevantes.map((news) => {
                 return(
                     <div className="target" key={news.id}>
-                        {/* { newsRelevantes.length ? 
-                        <Add
-                        position="center"
-                        img = "https://www.oaxaca.gob.mx/wp-content/uploads/2020/09/banner-OaxacaNuevaImagen.png"
-                        url= "https://sspo.gob.mx/"
-                            
-                        /> 
-                         : 
-                         */}
+                        
                         <a href={news.url} target="_blank">
                         {props.region != props.region ? getData : "" }
                         <div className="frame">

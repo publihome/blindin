@@ -422,7 +422,7 @@ h5{
     }
 
     .content-secondary > p {
-        display: none;
+        display: none!important;
     }
 
     .btn-see-more {

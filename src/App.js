@@ -25,7 +25,7 @@ function App() {
   
 
   const base_url = "https://api.blindin.mx/api/search/"
-  const addUrl = "http://api.blindin.mx/api/adds"
+  const addUrl = "https://api.blindin.mx/api/adds"
   
   const getAdds = async (ubication) => {
     try{
@@ -102,10 +102,12 @@ useEffect(()=>{
             
             {/* {console.log(newsData)} */}
             { newsData.length != 0 ? 
-               <NewsSearch 
-                 news={newsData}
-                searchNew={searchNew} 
-                />
+            <div className="col-12">
+              <NewsSearch 
+                news={newsData}
+               searchNew={searchNew} 
+               />
+            </div> 
                 :
                 "" 
             }

@@ -12,18 +12,17 @@ function Deportes(props){
     UseTitle({title: "Deportes"})
     return(
         <>
-            <div className="col-lg-12 col-xl-10">
+            <div className="col-lg-12">
                 {/* <Video/> */}
             <Section name="Deportes"/>
             </div>
-            <div className="col-lg-7 col-md-5 col-xl-7 col-sm-12 ">
+            <div className="col-lg-7 col-md-6 col-xl-7">
                 <NewsPrincipal
                  type={typeNew} 
                  region={props.region}
-
                  />
             </div>
-            <div className="col-lg-5 col-md-5 col-xl-5 col-sm-12 col-12">
+            <div className="col-lg-5 col-md-6 col-xl-5">
                 <Newsterciarias 
                     type={typeNew}
                     region={props.region}

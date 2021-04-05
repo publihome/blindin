@@ -1,5 +1,6 @@
 import React from 'react';
 import Section from './Section';
+import noImagen from '../icons/SIN-IMAGEN.jpg' 
 
 function NewsSearch(props) {
     return (
@@ -15,16 +16,17 @@ function NewsSearch(props) {
                             <>
                                 <div className="target" key={n.id}>
                                     <div className="flex-target">
-                                        <div className="image-secondary">
-                                            <img src={n.img} alt={n.titulo} className="secondary-img" />
-                                        </div>
+                                    <div className="frame">
+                                        <img src={n.img === "without image" ? noImagen : n.img } alt={n.titulo} className="image-new" />
+                                    </div>
+                                        <p className="metadata category">{n.categoria}</p>
                                         <div className="content-secondary">
-                                            <div className="title">
-                                                <h4>
+                                            {/* <div className="title"> */}
+                                                <h3>
                                                     {n.titulo}
-                                                </h4>
+                                                </h3>
                                                 <p>{n.resumen} <a href={n.url} className="link-secondary">leer más...</a></p>
-                                            </div>
+                                            {/* </div> */}
                                         </div>
                                     </div>
                                 </div>
