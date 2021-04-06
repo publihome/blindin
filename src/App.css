@@ -29,16 +29,45 @@ hr{
   height: 10px;
 }
 
-@media only screen and (max-width: 575.98px){
+.target-search{
+  height: auto;
+}
 
-  .border-note {
-    /* display: none; */
-  }
+.frame-search{
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  max-width: 260px;
+}
+
+.search-img{
+  width: 100%;
+  max-width: 300px;
+  
+}
+
+@media only screen and (max-width: 575.98px){
 
   hr{
     margin-top: 5px;
-  height: 5px;
+    height: 5px;
   }
+
+  .target-search{
+    height: auto;
+    max-width: 100%;
+
+  }
+  
+  .frame-search{
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .search-img{
+    width: 100%;
+    max-width: 100%;
+  } 
 
 
 
@@ -53,6 +82,23 @@ hr{
     margin: auto;
     background: var(--white);
   }
+
+  .frame-search{
+    width: 100%;
+    max-width: 300px;
+    height: min-content;
+    min-height: max-content;
+  }
+  
+  .search-img{
+    width: 100%;
+    max-width: 260px;
+    min-height: 120px;
+    
+  } 
+
+
+
 }
 
 

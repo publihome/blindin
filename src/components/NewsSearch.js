@@ -14,10 +14,10 @@ function NewsSearch(props) {
                     props.news.map((n) => {
                         return (
                             <>
-                                <div className="target" key={n.id}>
+                                <div className="target target-search" key={n.id}>
                                     <div className="flex-target">
-                                    <div className="frame">
-                                        <img src={n.img === "without image" ? noImagen : n.img } alt={n.titulo} className="image-new" />
+                                    <div className="frame-search">
+                                        <img src={n.img === "without image" ? noImagen : n.img } alt={n.titulo} className="search-img" />
                                     </div>
                                         <p className="metadata category">{n.categoria}</p>
                                         <div className="content-secondary">

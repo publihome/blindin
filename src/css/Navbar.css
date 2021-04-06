@@ -259,6 +259,90 @@
         width: 35px;
         height: 35px;
         margin-right: auto;
+     
+    }
+
+    .menu-ico {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        margin-right: auto;
+    } 
+
+    .d-block{
+        background: var(--blue);
+    }
+
+
+    .btn-search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        padding: 20px;
+
+    }
+
+
+    .input-search{
+        width: 85%;
+        height: 40px;
+
+    }
+
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    
+    .container {
+        padding: 0px;
+        margin: 0px;
+        max-width: 100%;
+
+    }
+
+    .navbar-head {
+      position: relative;
+        height: 60px;
+    }
+    
+
+    .navbar {
+        background: transparent;
+        height: auto;
+        padding: 5px;
+        font-size: 18px;
+        border: none;
+        padding: 0px;
+    }
+
+    
+    .navbar-ul {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        background: transparent;
+    }
+    
+    .navbar-li{
+        text-decoration: none; 
+        color: var(--white);
+        display: block;
+        margin-left: 0px;
+        padding: 2px 0;
+        border: none
+        
+    }
+    
+    .button-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 6px;
+        width: 35px;
+        height: 35px;
+        margin-right: auto;
         /* background: var(--blue); */
      
     }
@@ -295,71 +379,7 @@
 
     }
 
-}
 
-
-@media (min-width: 576px) and (max-width: 767.98px){
-    
-    .container{
-         max-width: 100%;
-    }
-    .navbar {
-        background: var(--blue);
-        height: auto;
-        padding: 5px;
-        font-size: 18px;
-        border: none
-    }
-    
-        /* align-content: center; */
-    .navbar-ul-rigth {
-        display: block;
-        /* width: 70%; */
-        padding: 5px;
-        margin: 0px;
-
-    }
-
-    
-    .navbar-ul {
-        display: block;
-        flex-direction: column;
-        width: 100%;
-        padding: 5px;
-        
-    }
-    
-    .navbar-li{
-        text-decoration: none; 
-        color: var(--white);
-        display: block;
-        margin-left: 0px;
-        padding: 2px 0;
-        border: none
-        
-    }
-    
-    .button-menu {
-        display: flex;
-        width: 25px;
-        height: 25px;
-        margin: 2px;
-        margin-left: auto;
-     
-    }
-
-    .menu-ico {
-        width: 25px;
-        height: 25px;
-        margin-left: auto;
-    } 
-
-
-    .input-search{
-        width: 85%;
-        height: 40px;
-
-    }
 
 }
 

@@ -6,7 +6,6 @@ import Recientes from './views/Recientes'
 import Deportes from './views/Deportes'
 import Economia from './views/Economia';
 import Salud from './views/Salud';
-import Add from './components/Add';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Covid from './views/Covid';
 import Navbar2 from './components/Navbar2';
@@ -139,8 +138,8 @@ useEffect(()=>{
             </Route>
           </div>
         </div>
-      <Adds adds={addsbottom} position={"down"}/> 
       </div>
+      <Adds adds={addsbottom} position={"down"}/> 
 
     </Router>
 

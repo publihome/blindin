@@ -32,10 +32,6 @@
     object-fit: fill;
 }
 
-.img {
-    
-}
-
 #top {
     object-fit: contain;
     height: inherit;
@@ -57,7 +53,6 @@
     margin: auto;
     width: 700px;
     height: 70px;
-    /* border: 1px solid rgba(0, 0, 0, 0.13); */
     background: white;
     /* position: fixed;
     bottom: 0px;
@@ -69,51 +64,9 @@
 .carousel-root:last-child {
     position: fixed;
     bottom: 0px;
-    right: -750px;
+    right: 25px; 
+    left: 25px; 
 }
-
-/* #left{
-    object-fit: contain;
-    width: inherit;
-    padding: 5px;
-
-}
-
-
-
-.add-target-left {
-    display: block; 
-    width: 100px;
-    max-width: 100px;
-    background: white;
-    height: 60vh;
-     border: 1px solid #000; 
-    position: fixed;
-    left: 3px;
-    top: 20%;
-    z-index: 100px;
-}
-
-#right{
-    object-fit: contain;
-    width: inherit;
-    padding: 5px;
-    align-items: center;
-}
-
-.add-target-right {
-    display: block; 
-    width: 100px;
-    min-width: 100px;
-    max-width: 100px;
-    height: 60vh;
-    border: 1px solid #000; 
-    position: fixed;
-    background: white;
-    right: 3px;
-    top: 20%;
-    z-index: 100px;
-} */
 
 .button {
     display: flex;
@@ -143,6 +96,55 @@
         position: fixed;
         bottom: 0px;
         right: 0px;
+        left: 0px;
+}
+
+    .add-target-center {
+        display: block;
+        margin: 5px;
+        width: 100%;
+        height: 80px;
+    }
+
+    #top {
+        padding: 0px;
+
+    }
+    
+    .add-target-bottom {
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: 50px;
+    }
+    
+    .img {
+        object-fit: cover;
+        text-align: center;
+    }
+
+
+    .add-target-bottom > img{
+        padding: 0px;
+    
+    }
+
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+
+    .add-target {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-root:last-child {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
 }
 
     .add-target-center {
@@ -177,29 +179,6 @@
     }
 
 
-}
-
-@media (min-width: 576px) and (max-width: 767.98px){
-
-    .add-target {
-        display: block;
-        margin: 5px;
-        width: 100%;
-        height: 50px;
-        /* position: fixed; */
-        top: 2px;
-        /* z-index: 100px */
-        
-    }
-
-    .add-target-left{
-        display: none;
-    }
-
-    .add-target-right{
-        display: none;
-    }
-
 
 }
 
@@ -215,6 +194,10 @@
         left: 3px;
         top: 20%;
         z-index: 100px;
+    }
+
+    .container{
+        max-width: 100%;
     }
     
     .add-target-right {
