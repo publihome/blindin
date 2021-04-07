@@ -21,18 +21,18 @@ function NewsPrincipal(props) {
             } else {
                 setnewsRelevantes(newsRelevantes => newsRelevantes.concat(data.data))
             }
+            setPage(page + 1)
         } catch (error) {
             console.error(error)
         }
     }
 
     useEffect(() => {
-        setPage(page + 1)
+        // setPage(page + 1);
         getData()
     }, []);
 
     const getMoreData = () => {
-        setPage(page + 1);
         getData();
     }
 
@@ -44,14 +44,14 @@ function NewsPrincipal(props) {
 
     return (
         <div className="news">
-            {modal ? <Modal modal={modal} url={urlPage} toggle={togleModal}/> : ""}
+            {modal ? <Modal modal={modal} url={urlPage} toggle={togleModal} /> : ""}
             {
                 newsRelevantes.map((news) => {
                     return (
                         <div className="target" key={news.id}>
 
-                            <a href="#!" onClick={()=> {setModal(true); setUrlPage(news.url)}} >
-                                {props.region != props.region ? getData : ""}
+                            <a href="#!" onClick={() => { setModal(true); setUrlPage(news.url) }} >
+                                {props.region !== props.region ? getData : ""}
                                 <div className="frame">
                                     <img src={news.img === "without image" ? noImagen : news.img} alt={news.titulo} className="image-new" />
                                 </div>
@@ -62,7 +62,7 @@ function NewsPrincipal(props) {
                                         <h3>{news.titulo}</h3>
                                     </div>
                                     <p>{news.resumen}</p>
-                                    <button onClick={()=> {setModal(true); setUrlPage(news.url)}} className="btn-more-principal" >Saber más</button>
+                                    <button onClick={() => { setModal(true); setUrlPage(news.url) }} className="btn-more-principal" >Saber más</button>
                                 </div>
                             </a>
 

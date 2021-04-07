@@ -1,5 +1,4 @@
 import React from 'react';
-import Add from './Add'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import axios from 'axios';
@@ -9,8 +8,8 @@ function Adds(props) {
     const url = 'http://api.blindin.mx/api/adds/clicked'
 
     const setClick = async (id) => {
-        console.log(id)
-        // const response = await axios.post(`${url}/${id}`)
+        // console.log(id)
+        await axios.post(`${url}/${id}`)
         // console.log(response)
     }
 
@@ -18,7 +17,7 @@ function Adds(props) {
     return (
         <>
             {
-                props.position == "top" ?
+                props.position === "top" ?
                     <Carousel
                         autoPlay={true}
                         infiniteLoop={true}
@@ -39,7 +38,7 @@ function Adds(props) {
                         ))
                         }
                     </Carousel>
-                    : props.position == "down" ?
+                    : props.position === "down" ?
                         <Carousel
                             autoPlay={true}
                             infiniteLoop={true}

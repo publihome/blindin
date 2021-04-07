@@ -15,24 +15,21 @@ function NewsSecundarias(props){
 
     useEffect(() => {
         getData();
-        setPage(page + 1)
     },[])
 
 
     const getData = async () => {
-        // console.log("data")
         const response = await axios.get(`${url}${props.type}/${props.region}?page=${page}`)
-        // console.log(response)
         const data = response.data;
        if(secondaryNews === ""){
             setSecondaryNews(data.data)
        }else{
            setSecondaryNews(secondaryNews => secondaryNews.concat(data.data))
        } 
+       setPage(page + 1 );
     } 
 
     const getMoreData = () => {
-        setPage(page + 1 );
         getData();
     }
 
@@ -40,8 +37,6 @@ function NewsSecundarias(props){
         setModal(!modal)
         setUrlPage("")
     }
-
-
 
     return (
         <div className="secondary-news">

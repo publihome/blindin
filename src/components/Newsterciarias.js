@@ -14,7 +14,6 @@ function Newsterciarias(props){
 
     useEffect(() => {        
         getData()
-        setPage(page +1)
     },[])
 
     const getData = async() => {
@@ -26,11 +25,12 @@ function Newsterciarias(props){
         }else{
             setNewsTerciarias(newsterciarias=> newsterciarias.concat(data.data))
         }
+        setPage(page +1)
+
     }
     
-    const getMoreData = async () => {
-        await setPage(page + 1 );
-        await getData();
+    const getMoreData = () => {
+        getData();
     }
 
     const togleModal = () => {

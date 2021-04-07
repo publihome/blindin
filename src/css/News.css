@@ -847,11 +847,9 @@ iframe{
         width: 100%;
         background: var(--blue);
         border: transparent;
-        
         color: var(--white);
         padding: 5px;
         margin-bottom: 80px;
-        
     }
 
     .btn-see-more:hover{

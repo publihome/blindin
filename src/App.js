@@ -29,11 +29,11 @@ function App() {
   const getAdds = async (ubication) => {
     try{
         const response= await axios.get(`${addUrl}/${ubication}`);
-        if(ubication == "top"){
+        if(ubication === "top"){
           setAddsTop(response.data)
         }
 
-        if(ubication == "down"){
+        if(ubication === "down"){
           setAddsbottom(response.data)
         }
     }catch (error) {
@@ -68,11 +68,11 @@ useEffect(()=>{
   }
 
   const setNews = (response) => {
-    if(response == ""){
+    if(response === ""){
       setnewsData([]);
       return;
     }
-    if (newsData.length == 0) {
+    if (newsData.length === 0) {
       setnewsData(response)
     } else {
       setnewsData(newsData => newsData.concat(response))
@@ -100,7 +100,7 @@ useEffect(()=>{
           <div className="row">
             
             {/* {console.log(newsData)} */}
-            { newsData.length != 0 ? 
+            { newsData.length !== 0 ? 
             <div className="col-12">
               <NewsSearch 
                 news={newsData}
