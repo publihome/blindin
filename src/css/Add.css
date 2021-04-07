@@ -10,7 +10,6 @@
     margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    object-fit: contain;
     background: white;
     
 }
@@ -34,8 +33,8 @@
 
 #top {
     object-fit: contain;
+    /* width: 700px; */
     height: inherit;
-    width: inherit;
     padding: 5px;
     display: flex;
     justify-content: center;

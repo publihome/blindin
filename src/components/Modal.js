@@ -17,10 +17,7 @@ const ModalExample = (props) => {
       <Modal isOpen={modal} toggle={toggle} >
         <ModalHeader toggle={toggle}><img src={logo} alt="title" className="logo"/></ModalHeader>
         <ModalBody >
-            <iframe src={url} name="">
-
-            </iframe>
-          
+            <iframe src={url} name=""></iframe>
         </ModalBody>
       </Modal>
     </div>

@@ -2,15 +2,12 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import axios from 'axios';
-// var Carousel = require('react-responsive-carousel').Carousel;
+import '../css/Add.css'
 
 function Adds(props) {
     const url = 'http://api.blindin.mx/api/adds/clicked'
-
     const setClick = async (id) => {
-        // console.log(id)
         await axios.post(`${url}/${id}`)
-        // console.log(response)
     }
 
 
