@@ -62,7 +62,7 @@ function NewsPrincipal(props) {
                                         <h3>{news.titulo}</h3>
                                     </div>
                                     <p>{news.resumen}</p>
-                                    <button onClick={() => { setModal(true); setUrlPage(news.url) }} className="btn-more-principal" >Saber más</button>
+                                    <button onClick={() => { setModal(true); setUrlPage(news.url) }} className="btn-more-principal" >Leer más...</button>
                                 </div>
                             </a>
 

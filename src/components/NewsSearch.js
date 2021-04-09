@@ -3,14 +3,14 @@ import Section from './Section';
 import noImagen from '../icons/SIN-IMAGEN.jpg' 
 
 function NewsSearch(props) {
+    console.log(props.news)
+    if(props.news.length === 0) return("")
     return (
 
         <>
-            {/* {console.log(props.news)} */}
             <div className="container mb-3">
                 <Section name="Busquedad" />
                 {props.news.length >= 0 ?
-
                     props.news.map((n) => {
                         return (
                             <>

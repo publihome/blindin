@@ -12,7 +12,7 @@ import Navbar2 from './components/Navbar2';
 import axios from 'axios';
 import NewsSearch from './components/NewsSearch'
 import Adds from './components/Adds'
-
+import Spinner from './components/Spinner';
 
 function App() {
   const [region, setRegion] = useState("oaxaca");
@@ -21,6 +21,7 @@ function App() {
   const [word, setWord] = useState();
   const [addsTop, setAddsTop] = useState([]);
   const [addsbottom, setAddsbottom] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   
 
   const base_url = "https://api.blindin.mx/api/search/"
@@ -36,6 +37,7 @@ function App() {
         if(ubication === "down"){
           setAddsbottom(response.data)
         }
+        setIsLoading(true)
     }catch (error) {
         console.error(error)
     }
@@ -45,6 +47,7 @@ function App() {
 useEffect(()=>{
   getAdds("top")
   getAdds("down")
+  
 },[])
 
 
@@ -58,12 +61,13 @@ useEffect(()=>{
   }
 
   const searchNew = async () => {
+    if(word == ""){
+      setWord("nada")
+    }
     const response = await axios.get(`${base_url}${word}?page=${page}`)
     console.log(response)
     setNews(response.data.data)
-    if(word){
-
-    }
+    
     setPage(page + 1)
   }
 
@@ -82,8 +86,10 @@ useEffect(()=>{
   const removeValuesState = () => {
     setnewsData([])
   }
+  if(isLoading === false ) return( <Spinner /> )
 
   return (
+    <>
     <Router>
       <Navbar
         changeRegion={changeRegion}
@@ -100,16 +106,13 @@ useEffect(()=>{
           <div className="row">
             
             {/* {console.log(newsData)} */}
-            { newsData.length !== 0 ? 
             <div className="col-12">
               <NewsSearch 
                 news={newsData}
-               searchNew={searchNew} 
+                searchNew={searchNew}
                />
             </div> 
-                :
-                "" 
-            }
+          
             <Route path="/Deportes" >
               <Deportes
                 region={region}
@@ -142,6 +145,7 @@ useEffect(()=>{
       <Adds adds={addsbottom} position={"down"}/> 
 
     </Router>
+    </>
 
   );
 }

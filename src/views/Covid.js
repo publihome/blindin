@@ -6,20 +6,20 @@ import UseTitle from '../hooks/UseTitle';
 function Covid(){
     UseTitle({title: "Covid"})
 
-    // const [covidData, setCovidData ] = useState([]);
+    const [covidData, setCovidData ] = useState([]);
 
 
-    // const getDataCodiv = async () => {
-    //     const response = await axios.get("https://coronavirus-tracker-api.herokuapp.com/v2/locations/181")
-    //     const data = response.request.response;
-    //     console.log(JSON.parse(data));
-    //     setCovidData(JSON.parse(data))
+        const getDataCodiv = async () => {
+        const response = await axios.get("https://coronavirus-tracker-api.herokuapp.com/v2/locations/181")
+        const data = response.request.response;
+        console.log(JSON.parse(data));
+        setCovidData(JSON.parse(data))
 
-    // }
+     }
 
-    // useEffect(() => {
-    //     getDataCodiv()
-    // },[])
+     useEffect(() => {
+         getDataCodiv()
+     },[])
 
     return(
         <>
