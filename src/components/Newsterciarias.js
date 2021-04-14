@@ -49,7 +49,8 @@ function Newsterciarias(props){
                             <a href="#!" onClick={()=> {setModal(true); setUrlPage(news.url)}}>
                             <div className="card-new">
                                 <div className="target-terciaria">
-                                    <img src={news.img} className="imagen-terciaria" alt={news.titulo}/>
+                                    <img src={news.img} alt={news.titulo} className="imagen-terciaria" />
+                                    
                                     <h3 className="titulo-terciario">{news.titulo} <a href="#!" onClick={()=> {setModal(true); setUrlPage(news.url)}} className="link">Leer más....</a></h3>
                                 </div>
                             </div>   

@@ -40,6 +40,7 @@ function NewsSecundarias(props){
 
     return (
         <div className="secondary-news">
+            {console.log(secondaryNews)}
             {modal ? <Modal modal={modal} url={urlPage} toggle={togleModal}/> : ""}
             {
                 secondaryNews.map((news) => {

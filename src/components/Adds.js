@@ -5,7 +5,7 @@ import axios from 'axios';
 import '../css/Add.css'
 
 function Adds(props) {
-    const url = 'http://api.blindin.mx/api/adds/clicked'
+    const url = 'https://api.blindin.mx/api/adds/clicked'
     const setClick = async (id) => {
         await axios.post(`${url}/${id}`)
     }
@@ -25,7 +25,7 @@ function Adds(props) {
                         showIndicators={false}
                     >
                         {props.adds.map(add => (
-                            <a onClick={()=>setClick(add.id)} target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
+                            <a  target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
                                 <div className={add.position === "top" ? "add-target"
                                     : add.position === "center" ? "add-target-center"
                                         : add.position === "down" ? "add-target-bottom" : ""} >
@@ -47,7 +47,7 @@ function Adds(props) {
                             stopOnHover={false}
                         >
                             {props.adds.map(add => (
-                                <a onClick={()=>setClick(add.id)} target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
+                                <a  target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
                                     <div className={add.position === "top" ? "add-target"
                                         : add.position === "center" ? "add-target-center"
                                             : add.position === "down" ? "add-target-bottom" : ""} >
