@@ -12,6 +12,8 @@ const ModalExample = (props) => {
     toggle
   } = props;
 
+  console.log(url)
+
   return (
     <div>
       <Modal isOpen={modal} toggle={toggle} >

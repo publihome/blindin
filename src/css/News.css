@@ -60,7 +60,11 @@
 
 .title-principal {
     /* padding: 10px; */
-    text-align: justify;
+    /* text-align: justify; */
+}
+
+.title-covid > h3{
+    font-size: 22px;
 }
 
 .btn-more-principal:hover{

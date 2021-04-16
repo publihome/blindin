@@ -25,7 +25,7 @@ function Adds(props) {
                         showIndicators={false}
                     >
                         {props.adds.map(add => (
-                            <a  target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
+                            <a onClick={()=>setClick(add.id)} target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
                                 <div className={add.position === "top" ? "add-target"
                                     : add.position === "center" ? "add-target-center"
                                         : add.position === "down" ? "add-target-bottom" : ""} >
@@ -47,7 +47,7 @@ function Adds(props) {
                             stopOnHover={false}
                         >
                             {props.adds.map(add => (
-                                <a  target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
+                                <a onClick={()=> setClick(add.id)} target="_blank" href={add.url ? add.url : "https://somoslocales.mx/"} key={add.id}>
                                     <div className={add.position === "top" ? "add-target"
                                         : add.position === "center" ? "add-target-center"
                                             : add.position === "down" ? "add-target-bottom" : ""} >
