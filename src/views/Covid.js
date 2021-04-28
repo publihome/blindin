@@ -11,7 +11,7 @@ const url = "https://api.blindin.mx/api/covid/oaxaca";
 
 function Covid() {
     const metaDescription = "Espacio informatio de noticias sobre covid19";
-    const title = "Covid"
+    const title = "Blindin | Covid"
 
     // UseTitle({ title: "Covid", description: metaDescription })
 

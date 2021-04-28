@@ -55,6 +55,10 @@ useEffect(()=>{
     setRegion(reg);
   }
 
+  // useEffect(()=> {
+  //   changeRegion()
+  // }, [region])
+
   const setWordSearch = (word) => {
       setWord(word);
     

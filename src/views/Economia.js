@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet'
 
 function Economia(props) {
     const metaDescription = "Espacio informatio de noticias sobre economia de oaxaca";
-    const title = "Ecomonía"
+    const title = "Blindin | Ecomonía"
     const typeNew = "/economy";
     // UseTitle({ title: "Economía", description:metaDescription })
 

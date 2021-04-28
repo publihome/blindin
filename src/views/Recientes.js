@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet'
 function Recientes(props) {
 
     const metaDescription = "noticias de hoy, espacio informativo de noticias recientes";
-    const title = "Recientes"
+    const title = "Blindin | Salud Recientes"
 
     const typeNew = "";
     // UseTitle({title: "Recientes", description: metaDescription})

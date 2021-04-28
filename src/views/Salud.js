@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet'
 function Salud(props) {
 
     const metaDescription = "Espacio informatio de noticias sobre salud";
-    const title = "Salud"
+    const title = "Blindin | Salud"
     const typeNew = "/health";
     // UseTitle({title: "Salud", description: metaDescription})
     return (
