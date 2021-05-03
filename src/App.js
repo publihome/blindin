@@ -69,7 +69,7 @@ useEffect(()=>{
       setWord("nada")
     }
     const response = await axios.get(`${base_url}${word}?page=${page}`)
-    console.log(response)
+    // console.log(response)
     setNews(response.data.data)
     
     setPage(page + 1)

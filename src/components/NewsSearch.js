@@ -3,7 +3,7 @@ import Section from './Section';
 import noImagen from '../icons/SIN-IMAGEN.jpg' 
 
 function NewsSearch(props) {
-    console.log(props.news)
+    // console.log(props.news)
     if(props.news.length === 0) return("")
     return (
 

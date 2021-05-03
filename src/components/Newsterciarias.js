@@ -19,7 +19,7 @@ function Newsterciarias(props){
     const getData = async() => {
         const response = await axios.get(`${url}${props.type}/${props.region}?page=${page}`)
         const data = response.data;
-        console.log(response)
+        // console.log(response)
         if(newsterciarias === ""){
             setNewsTerciarias(data.data);
         }else{
@@ -45,13 +45,14 @@ function Newsterciarias(props){
             {
                 newsterciarias.map((news) => {
                     return(
-                        <div className="col-md-6" key={news.id}>
+                        <div className="col-md-6 p-1" key={news.id}>
                             <a href="#!" onClick={()=> {setModal(true); setUrlPage(news.url)}}>
                             <div className="card-new">
                                 <div className="target-terciaria">
                                     <img src={news.img} alt={news.titulo} className="imagen-terciaria" />
-                                    
-                                    <h3 className="titulo-terciario">{news.titulo} <a href="#!" onClick={()=> {setModal(true); setUrlPage(news.url)}} className="link">Leer más....</a></h3>
+                                    <div className="bg">
+                                    </div>
+                                        <h3 className="titulo-terciario">{news.titulo}</h3>
                                 </div>
                             </div>   
                             </a>

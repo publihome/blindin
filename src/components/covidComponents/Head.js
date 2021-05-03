@@ -5,7 +5,7 @@ function  Head(props){
     return(
         codivData !== undefined ? 
         <>
-        {console.log(props)}
+        {/* {console.log(props)} */}
         {codivData.last_updated}
         </>
         : ""

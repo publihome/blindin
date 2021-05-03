@@ -40,7 +40,7 @@ function NewsSecundarias(props){
 
     return (
         <div className="secondary-news">
-            {console.log(secondaryNews)}
+            {/* {console.log(secondaryNews)} */}
             {modal ? <Modal modal={modal} url={urlPage} toggle={togleModal}/> : ""}
             {
                 secondaryNews.map((news) => {
@@ -53,7 +53,7 @@ function NewsSecundarias(props){
                                 </div>
                                 <div className="content-secondary">
                                     <h3>{news.titulo}</h3>
-                                    <p>{news.resumen} <a href="#!" onClick={()=> {setModal(true); setUrlPage(news.url)}} className="link-secondary">leer más...</a></p>                                    
+                                    <p>{news.resumen} </p>                                    
                                 </div>
                             </div>
                             </a>

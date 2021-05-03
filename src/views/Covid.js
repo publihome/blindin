@@ -41,7 +41,7 @@ function Covid() {
             setNewsCovid(newsRelevantes => newsRelevantes.concat(response.data.data))
         }
         setPage(page + 1)
-        console.log(response)
+        // console.log(response)
     }
 
     useEffect(() => {
@@ -79,20 +79,8 @@ function Covid() {
                         </div>
                     ))
                 }
-                {console.log(covidData)}
-                {/* {covidData.location.last_updated} */}
-                {/* <Head covidData={covidData.location}/> */}
             </div>
             <button className="btn-see-more" onClick={getMoreData}>Ver más..</button>
-
-
-            {/* {console.log(covidData.location.timelines.confirmed)}
-        <Bar
-            data = {covidData.location.timelines.confirmed}
-            width={100}
-            height={50}
-        /> */}
-            {/* <CovidChart/> */}
         </>
     )
 }

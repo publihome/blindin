@@ -12,7 +12,7 @@ const ModalExample = (props) => {
     toggle
   } = props;
 
-  console.log(url)
+  // console.log(url)
 
   return (
     <div>
