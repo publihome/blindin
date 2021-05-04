@@ -33,7 +33,7 @@ function Deportes(props) {
                             />
                         </>
                     ) : (
-                        <>
+                        <div className="row">
                             <div className="col-lg-7 col-md-6 col-xl-7">
                                 <NewsPrincipal
                                     type={typeNew}
@@ -52,7 +52,7 @@ function Deportes(props) {
                                     region={props.region}
                                 />
                             </div>
-                        </>
+                        </div>
                     )
                 }
             </div>

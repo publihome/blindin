@@ -12,9 +12,6 @@ const url = "https://api.blindin.mx/api/covid/oaxaca";
 function Covid() {
     const metaDescription = "Espacio informatio de noticias sobre covid19";
     const title = "Blindin | Covid"
-
-    // UseTitle({ title: "Covid", description: metaDescription })
-
     const [covidData, setCovidData] = useState([]);
     const [newsCovid, setNewsCovid] = useState([])
     const [page, setPage] = useState(1);
@@ -41,7 +38,6 @@ function Covid() {
             setNewsCovid(newsRelevantes => newsRelevantes.concat(response.data.data))
         }
         setPage(page + 1)
-        // console.log(response)
     }
 
     useEffect(() => {

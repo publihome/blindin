@@ -45,7 +45,7 @@ function Newsterciarias(props){
             {
                 newsterciarias.map((news) => {
                     return(
-                        <div className="col-md-6 p-1" key={news.id}>
+                        <div className="col-md-6 col-lg-6  col-xs-12 p-1" key={news.id}>
                             <a href="#!" onClick={()=> {setModal(true); setUrlPage(news.url)}}>
                             <div className="card-new">
                                 <div className="target-terciaria">

@@ -12,12 +12,9 @@ const url = `https://api.blindin.mx/api/primarias`;
 
 
 function Recientes(props) {
-
     const metaDescription = "noticias de hoy, espacio informativo de noticias recientes";
     const title = "Blindin | Recientes"
-
     const typeNew = "";
-    // UseTitle({title: "Recientes", description: metaDescription})
 
     return (
         <>
@@ -27,7 +24,6 @@ function Recientes(props) {
             </Helmet>
 
             <div className="col-lg-12">
-                {/* <Video/> */}
                 <Section name="Recientes" />
             {
             window.innerWidth < 775 ? (
@@ -39,7 +35,7 @@ function Recientes(props) {
                     />
                 </>
             ):(
-                <>
+                <div className="row">
                     <div className="col-lg-7 col-md-6 col-xl-7">
                         <NewsPrincipal
                             type={typeNew}
@@ -57,11 +53,10 @@ function Recientes(props) {
                             region={props.region}
                         />
                     </div>
-                </>
+                </div>
             )
             }
             </div>
-
         </>
     );
 

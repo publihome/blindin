@@ -19,7 +19,6 @@ function Salud(props) {
     return (
 
         <>
-
             <Helmet>
                 <title>{title}</title>
                 <meta name="description" content={metaDescription} />
@@ -37,8 +36,7 @@ function Salud(props) {
                             />
                         </>
                     ) : (
-                        <>
-
+                        <div className="row">
                             <div className="col-lg-7 col-md-7 col-xl-7">
                                 <NewsPrincipal
                                     type={typeNew}
@@ -46,7 +44,6 @@ function Salud(props) {
                                     url={url}
 
                                 />
-
                             </div>
                             <div className="col-lg-5 col-md-5 col-xl-5">
                                 <Newsterciarias
@@ -54,13 +51,12 @@ function Salud(props) {
                                     region={props.region}
 
                                 />
-
                                 <NewsSecundarias
                                     type={typeNew}
                                     region={props.region}
                                 />
                             </div>
-                        </>
+                        </div>
                     )
                 }
             </div>
