@@ -5,19 +5,22 @@ import Modal from './Modal'
 
 
 function Newsterciarias(props){
-    const url = `https://api.blindin.mx/api/terciarias`;
+    const url = `https://api.blindin.mx/api/primarias`;
     const [newsterciarias, setNewsTerciarias] = useState([]);
     const [page, setPage] = useState(1);
     const [modal, setModal] = useState(false);
     const [urlPage, setUrlPage] = useState("");
+    const {type, region} = props
+
 
 
     useEffect(() => {        
+        setNewsTerciarias([])
         getData()
-    },[])
+    },[region])
 
     const getData = async() => {
-        const response = await axios.get(`${url}${props.type}/${props.region}?page=${page}`)
+        const response = await axios.get(`${url}${type}/${region}?page=${page}`)
         const data = response.data;
         // console.log(response)
         if(newsterciarias === ""){
@@ -45,7 +48,7 @@ function Newsterciarias(props){
             {
                 newsterciarias.map((news) => {
                     return(
-                        <div className="col-md-6 col-lg-6  col-xs-12 p-1" key={news.id}>
+                        <div className="col-md-6 col-lg-6 col-xs-12 p-1 " key={news.id}>
                             <a href="#!" onClick={()=> {setModal(true); setUrlPage(news.url)}}>
                             <div className="card-new">
                                 <div className="target-terciaria">

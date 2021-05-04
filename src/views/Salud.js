@@ -1,13 +1,11 @@
 import React from 'react';
 import NewsPrincipal from '../components/NewsPrincipal'
-// import Video from '../components/Video'
 import NewsSecundarias from '../components/NewsSecundarias';
 import Newsterciarias from '../components/Newsterciarias';
 import Section from '../components/Section'
-// import UseTitle from '../hooks/UseTitle';
 import { Helmet } from 'react-helmet'
 const urlMobile = "https://api.blindin.mx/api";
-const url = `https://api.blindin.mx/api/primarias`;
+const url = `https://api.blindin.mx/api/terciarias`;
 
 
 function Salud(props) {
@@ -15,7 +13,6 @@ function Salud(props) {
     const metaDescription = "Espacio informatio de noticias sobre salud";
     const title = "Blindin | Salud"
     const typeNew = "/health";
-    // UseTitle({title: "Salud", description: metaDescription})
     return (
 
         <>

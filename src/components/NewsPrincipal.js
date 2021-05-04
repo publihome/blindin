@@ -9,10 +9,12 @@ function NewsPrincipal(props) {
     const [page, setPage] = useState(1);
     const [modal, setModal] = useState(false);
     const [urlPage, setUrlPage] = useState("");
+    const {url, type, region} = props
 
     const getData = async () => {
+
         try {
-            const response = await axios.get(`${props.url}${props.type}/${props.region}?page=${page}`)
+            const response = await axios.get(`${url}${type}/${region}?page=${page}`)
             const data = await response.data;
             // console.log(data)
             if (newsRelevantes === "") {
@@ -27,9 +29,9 @@ function NewsPrincipal(props) {
     }
 
     useEffect(() => {
-        // setPage(page + 1);
+        setnewsRelevantes([])
         getData()
-    }, []);
+    }, [region]);
 
     const getMoreData = () => {
         getData();
@@ -51,7 +53,7 @@ function NewsPrincipal(props) {
                             <div className="col-sm-6 col-xs-12 col-md-12" key={news.id}>
                                 <div className="target">
                                     <a href="#!" onClick={() => { setModal(true); setUrlPage(news.url) }} >
-                                        {props.region !== props.region ? getData : ""}
+                                        {region !== region ? getData : ""}
                                         <div className="frame">
                                             <img src={news.img === "without image" ? noImagen : news.img} alt={news.titulo} className="image-new" />
                                         </div>

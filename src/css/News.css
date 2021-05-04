@@ -1,6 +1,8 @@
 @import '../App.css';
 
-
+p{
+    margin: 0
+}
 
 .loading {
     position: absolute;
