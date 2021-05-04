@@ -6,6 +6,8 @@ import Newsterciarias from '../components/Newsterciarias';
 import Section from '../components/Section';
 // import UseTitle from '../hooks/UseTitle'
 import { Helmet } from 'react-helmet'
+const urlMobile = "https://api.blindin.mx/api";
+const url = `https://api.blindin.mx/api/primarias`;
 
 
 function Economia(props) {
@@ -24,26 +26,44 @@ function Economia(props) {
             <div className="col-lg-12">
                 {/* <Video/> */}
                 <Section name="Economia" />
+                {
+                    window.innerWidth < 775 ? (
+                        <>
+                            <NewsPrincipal
+                                type={typeNew}
+                                region={props.region}
+                                url={urlMobile}
+                            />
+                        </>
+                    ) : (
+                        <>
 
+
+                            <div className="col-lg-7 col-md-7 col-xl-7">
+                                <NewsPrincipal
+                                    type={typeNew}
+                                    region={props.region}
+                                    url={url}
+
+                                />
+                            </div>
+
+                            <div className="col-lg-5 col-md-5 col-xl-5">
+                                <Newsterciarias
+                                    type={typeNew}
+                                    region={props.region}
+                                />
+                                <NewsSecundarias
+                                    type={typeNew}
+                                    region={props.region}
+                                />
+                            </div>
+                        </>
+                    )
+                }
             </div>
 
-            <div className="col-lg-7 col-md-7 col-xl-7">
-                <NewsPrincipal
-                    type={typeNew}
-                    region={props.region}
-                />
-            </div>
 
-            <div className="col-lg-5 col-md-5 col-xl-5">
-                <Newsterciarias
-                    type={typeNew}
-                    region={props.region}
-                />
-                <NewsSecundarias
-                    type={typeNew}
-                    region={props.region}
-                />
-            </div>
         </>
 
     );
