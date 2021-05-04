@@ -1,6 +1,8 @@
 @import '../App.css';
 
-
+p{
+    margin: 0
+}
 
 .loading {
     position: absolute;
@@ -327,7 +329,6 @@ iframe{
         margin-bottom: 10px;
         border-radius: 0px;
         background: var(--white);
-
     }
 
     .btn-more-news{
@@ -407,6 +408,7 @@ iframe{
         background: #000000b8;
         color: var(--white)!important;
         padding: 5px;
+        
     }
 
     /* .btn-more-principal:hover{

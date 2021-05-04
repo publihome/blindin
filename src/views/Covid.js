@@ -12,9 +12,6 @@ const url = "https://api.blindin.mx/api/covid/oaxaca";
 function Covid() {
     const metaDescription = "Espacio informatio de noticias sobre covid19";
     const title = "Blindin | Covid"
-
-    // UseTitle({ title: "Covid", description: metaDescription })
-
     const [covidData, setCovidData] = useState([]);
     const [newsCovid, setNewsCovid] = useState([])
     const [page, setPage] = useState(1);
@@ -41,7 +38,6 @@ function Covid() {
             setNewsCovid(newsRelevantes => newsRelevantes.concat(response.data.data))
         }
         setPage(page + 1)
-        // console.log(response)
     }
 
     useEffect(() => {
@@ -62,25 +58,26 @@ function Covid() {
             <div className="col-lg-12">
                 <Section name="Covid" />
 
+                <div className="row">
+                    {
+                        newsCovid.map(covid => (
+                            <div className="col-xl-4 col-lg-4 col-md-4">
+                                <TargetCovid
+                                    id={covid.id}
+                                    titulo={covid.titulo}
+                                    img={covid.img}
+                                    url={covid.url}
+                                    resumen={covid.resumen}
+                                    fecha={covid.fecha}
+                                    categoria={covid.categoria}
+                                />
+                            </div>
+                        ))
+                    }
+                </div>
+                <button className="btn-see-more" onClick={getMoreData}>Ver más..</button>
             </div>
-            <div className="row">
-                {
-                    newsCovid.map(covid => (
-                        <div className="col-xl-4 col-lg-4 col-md-4">
-                            <TargetCovid
-                                id={covid.id}
-                                titulo={covid.titulo}
-                                img={covid.img}
-                                url={covid.url}
-                                resumen={covid.resumen}
-                                fecha={covid.fecha}
-                                categoria={covid.categoria}
-                            />
-                        </div>
-                    ))
-                }
-            </div>
-            <button className="btn-see-more" onClick={getMoreData}>Ver más..</button>
+
         </>
     )
 }

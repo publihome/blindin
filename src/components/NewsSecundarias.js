@@ -12,14 +12,17 @@ function NewsSecundarias(props){
     const [page, setPage] = useState(1);
     const [modal, setModal] = useState(false);
     const [urlPage, setUrlPage] = useState("");
+    const {type, region} = props
+
 
     useEffect(() => {
+        setSecondaryNews([])
         getData();
-    },[])
+    },[region])
 
 
     const getData = async () => {
-        const response = await axios.get(`${url}${props.type}/${props.region}?page=${page}`)
+        const response = await axios.get(`${url}${type}/${region}?page=${page}`)
         const data = response.data;
        if(secondaryNews === ""){
             setSecondaryNews(data.data)

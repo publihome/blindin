@@ -250,6 +250,17 @@
         border: none
         
     }
+
+    .btns-region{
+        float: left;
+        position: absolute;
+        top: 12px;
+        left: 5px;
+    }
+    
+    ul > button{
+        font-size: 12px!important;
+    }
     
     .button-menu {
         display: block;
@@ -346,6 +357,17 @@
         /* background: var(--blue); */
      
     }
+
+    .btns-region{
+        float: left;
+        position: absolute;
+        top: 12px;
+        left: 5px;
+    }
+    
+    /* ul > button{
+        font-size: 12px!important;
+    } */
 
     .menu-ico {
         width: 40px;
