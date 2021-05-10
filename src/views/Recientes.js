@@ -1,10 +1,8 @@
 import React from 'react';
 import NewsPrincipal from '../components/NewsPrincipal'
-// import Video from '../components/Video'
 import NewsSecundarias from '../components/NewsSecundarias';
 import Newsterciarias from '../components/Newsterciarias';
 import Section from '../components/Section'
-// import UseTitle from '../hooks/UseTitle';
 import { Helmet } from 'react-helmet'
 
 const urlMobile = "https://api.blindin.mx/api/recent";

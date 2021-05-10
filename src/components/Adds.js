@@ -9,8 +9,6 @@ function Adds(props) {
     const setClick = async (id) => {
         await axios.post(`${url}/${id}`)
     }
-
-
     return (
         <>
             {

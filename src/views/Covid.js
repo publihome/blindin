@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-// import CovidChart from '../components/CovidChart'
-// import UseTitle from '../hooks/UseTitle';
-// import Head from '../components/covidComponents/Head'
 import TargetCovid from '../components/covidComponents/TargetCovid'
 import Section from '../components/Section'
 import { Helmet } from 'react-helmet'

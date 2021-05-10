@@ -21,7 +21,6 @@ function Salud(props) {
                 <meta name="description" content={metaDescription} />
             </Helmet>
             <div className="col-lg-12">
-                {/* <Video/> */}
                 <Section name="Salud" />
                 {
                     window.innerWidth < 775 ? (

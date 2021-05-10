@@ -1,8 +1,7 @@
-// import logo from './logo.svg';
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar2 from './components/Navbar2';
 import axios from 'axios';
 import NewsSearch from './components/NewsSearch'
@@ -18,7 +17,6 @@ function App() {
   const [addsTop, setAddsTop] = useState([]);
   const [addsbottom, setAddsbottom] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
 
   const base_url = "https://api.blindin.mx/api/search/"
   const addUrl = "https://api.blindin.mx/api/adds"
@@ -56,11 +54,10 @@ function App() {
   }
 
   const searchNew = async () => {
-    if (word == "") {
+    if (word === "") {
       setWord("nada")
     }
     const response = await axios.get(`${base_url}${word}?page=${page}`)
-    // console.log(response)
     setNews(response.data.data)
 
     setPage(page + 1)
@@ -86,7 +83,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router >
         <Navbar
           changeRegion={changeRegion}
           removeValuesState={removeValuesState}

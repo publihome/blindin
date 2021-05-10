@@ -5,11 +5,12 @@ import Modal from './Modal'
 
 
 function Newsterciarias(props){
-    const url = `https://api.blindin.mx/api/primarias`;
+    const url = `https://api.blindin.mx/api/terciarias`;
     const [newsterciarias, setNewsTerciarias] = useState([]);
     const [page, setPage] = useState(1);
     const [modal, setModal] = useState(false);
     const [urlPage, setUrlPage] = useState("");
+    const [img, setImg] = useState("");
     const {type, region} = props
 
 
@@ -39,17 +40,19 @@ function Newsterciarias(props){
     const togleModal = () => {
         setModal(!modal)
         setUrlPage("")
+        setImg("")
     }
 
     return(
         <div className="news">
             <div className ="row">
-                {modal ? <Modal modal={modal} url={urlPage} toggle={togleModal}/> : ""}
+                {modal ? <Modal modal={modal} url={urlPage} img={img} toggle={togleModal}/> : ""}
             {
                 newsterciarias.map((news) => {
                     return(
-                        <div className="col-md-6 col-lg-6 col-xs-12 p-1 " key={news.id}>
-                            <a href="#!" onClick={()=> {setModal(true); setUrlPage(news.url)}}>
+                        <div className="col-md-6 col-lg-6 col-xs-12 p-1 " key={news.id}
+                        onClick={()=> {setModal(true); setImg(news.img); setUrlPage(news.texto)}}
+                        >
                             <div className="card-new">
                                 <div className="target-terciaria">
                                     <img src={news.img} alt={news.titulo} className="imagen-terciaria" />
@@ -58,7 +61,6 @@ function Newsterciarias(props){
                                         <h3 className="titulo-terciario">{news.titulo}</h3>
                                 </div>
                             </div>   
-                            </a>
                         </div>
                     )
                 })
