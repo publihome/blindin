@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../css/News.css";
-// import Add from '../components/Add'
 import Modal from "./Modal";
+import noImagen from "../icons/SIN-IMAGEN.jpg";
+
 
 function NewsSecundarias(props) {
-  // const url = `https://api.blindin.mx/api/secundarias`;
   const url = `https://api.blindin.mx/api/secundarias`;
 
   const [secondaryNews, setSecondaryNews] = useState([]);
@@ -13,6 +13,7 @@ function NewsSecundarias(props) {
   const [modal, setModal] = useState(false);
   const [urlPage, setUrlPage] = useState("");
   const [img, setImg] = useState("");
+  const [titlenew, setTitlenew] = useState("");
   const { type, region } = props;
 
   useEffect(() => {
@@ -40,13 +41,13 @@ function NewsSecundarias(props) {
     setModal(!modal);
     setUrlPage("");
     setImg("");
+    setTitlenew("");
   };
 
   return (
-    <div className="secondary-news">
-      {/* {console.log(secondaryNews)} */}
+    <div className="secondary-news ">
       {modal ? (
-        <Modal modal={modal} url={urlPage} img={img} toggle={togleModal} />
+        <Modal modal={modal} url={urlPage} title={titlenew} img={img} toggle={togleModal} />
       ) : (
         ""
       )}
@@ -59,12 +60,13 @@ function NewsSecundarias(props) {
               setModal(true);
               setImg(news.img);
               setUrlPage(news.texto);
+              setTitlenew(news.titulo)
             }}
           >
             <div className="flex-target">
               <div className="imagen-secondary">
                 <img
-                  src={news.img}
+                  src={news.img != "without image" ? news.img : <noImagen/>}
                   alt={news.titulo}
                   className="secondary-img"
                 />

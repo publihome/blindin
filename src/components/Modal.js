@@ -10,7 +10,8 @@ const ModalExample = (props) => {
     modal,
     url,
     toggle,
-    img
+    img,
+    title
   } = props;
 
    console.log(typeof(url))
@@ -31,11 +32,17 @@ const ModalExample = (props) => {
       <Modal isOpen={modal} toggle={toggle} scrollable={true} className="modal">
         <ModalHeader toggle={toggle}><img src={logo} alt="title" className="logo"/></ModalHeader>
         <ModalBody >
-            {/* <iframe src={url} name=""> */}
             <div className="container">
-                <h2 class="title-new">{JSON.parse(url)[0]}</h2>
+                <h2 class="title-new">{title}</h2>
               <div className="cont-img-new">
-                <img src={img} alt="noticia" className="img-new-post"/>
+                {
+                  img != "without image" ?
+                  (
+                    <img src={img} alt="noticia" className="img-new-post"/>
+                  ) : (
+                    ""
+                  )
+                }
                 <hr class="my-2"/>
               </div>
               <div className="new-content">
@@ -43,10 +50,9 @@ const ModalExample = (props) => {
                   <p>{info}</p>
                 ))
                 }
+                <hr/>
               </div>
-
             </div>
-            {/* </iframe> */}
         </ModalBody>
       </Modal>
     </div>

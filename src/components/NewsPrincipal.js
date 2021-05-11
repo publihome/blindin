@@ -10,6 +10,7 @@ function NewsPrincipal(props) {
   const [modal, setModal] = useState(false);
   const [urlPage, setUrlPage] = useState("");
   const [img, setImg] = useState("");
+  const [titlenew, setTitlenew] = useState("");
   const { url, type, region } = props;
 
   const getData = async () => {
@@ -41,13 +42,14 @@ function NewsPrincipal(props) {
     setModal(!modal);
     setUrlPage("");
     setImg("");
+    setTitlenew("");
   };
 
   return (
     <>
       <div className="row">
         {modal ? (
-          <Modal modal={modal} url={urlPage} img={img} toggle={togleModal} />
+          <Modal modal={modal} url={urlPage} title={titlenew} img={img} toggle={togleModal} />
         ) : (
           ""
         )}
@@ -82,6 +84,7 @@ function NewsPrincipal(props) {
                       setModal(true);
                       setUrlPage(news.texto);
                       setImg(news.img);
+                      setTitlenew(news.titulo);
                     }}
                     className="btn-more-principal"
                   >
