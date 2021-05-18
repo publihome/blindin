@@ -239,6 +239,7 @@ a:hover{
 
 .new-content > p{
     padding-bottom: 10px;
+    text-align: justify;
     font-size: 18px;
 }
 

@@ -4,7 +4,7 @@ import NewsSecundarias from '../components/NewsSecundarias';
 import Newsterciarias from '../components/Newsterciarias';
 import Section from '../components/Section'
 import { Helmet } from 'react-helmet'
-const urlMobile = "https://api.blindin.mx/api/health";
+const urlMobile = "https://api.blindin.mx/api";
 const url = `https://api.blindin.mx/api/primarias`;
 
 

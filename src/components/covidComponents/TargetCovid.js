@@ -6,7 +6,7 @@ import Modal from './../Modal'
 
 function TargetCovid(props) {
     console.log(props)
-    const {id, titulo, img, url,fecha, categoria, resumen, texto} = props
+    const {id, titulo, img, url ,fecha, categoria, resumen, texto} = props
     const [page, setPage] = useState(1);
     const [modal, setModal] = useState(false);
     const [urlPage, setUrlPage] = useState("");
@@ -22,6 +22,7 @@ function TargetCovid(props) {
     return (
         <>
             <div className="target" key={id}>
+                {console.log(props)}
             {modal ? <Modal modal={modal} url={urlPage} toggle={togleModal} /> : ""}
                 <a href="#!" onClick={() => { setModal(true); setUrlPage(texto); setImgdata(imgdata) }} >
                     <div className="frame">

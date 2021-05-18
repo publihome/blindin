@@ -3,7 +3,7 @@ import Recientes from '../views/Recientes'
 import Deportes from '../views/Deportes'
 import Economia from '../views/Economia';
 import Salud from '../views/Salud';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Covid from '../views/Covid';
 
 export default function Routes(props){

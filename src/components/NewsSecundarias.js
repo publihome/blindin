@@ -66,7 +66,7 @@ function NewsSecundarias(props) {
             <div className="flex-target">
               <div className="imagen-secondary">
                 <img
-                  src={news.img != "without image" ? news.img : <noImagen/>}
+                  src={news.img !== "without image" ? news.img : <noImagen/>}
                   alt={news.titulo}
                   className="secondary-img"
                 />

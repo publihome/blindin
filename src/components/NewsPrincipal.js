@@ -13,7 +13,7 @@ function NewsPrincipal(props) {
   const [titlenew, setTitlenew] = useState("");
   const { url, type, region } = props;
 
-  const getData = async () => {
+  async function getData ()  {
     try {
       const response = await axios.get(`${url}${type}/${region}?page=${page}`);
       const data = await response.data;

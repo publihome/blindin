@@ -16,12 +16,12 @@ function Newsterciarias(props) {
   useEffect(() => {
     setNewsTerciarias([]);
     getData();
-  }, [region]);
+  },[region]);
 
   const getData = async () => {
     const response = await axios.get(`${url}${type}/${region}?page=${page}`);
     const data = response.data;
-    console.log(response)
+    console.log(data)
     if (newsterciarias === "") {
       setNewsTerciarias(data.data);
     } else {

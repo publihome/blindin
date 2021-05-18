@@ -10,7 +10,7 @@ function Navbar2(props){
                     <ul>
                         <div className="search-container">
                             <input type="text" placeholder="Buscar" className="input-search" onChange={(e) => { props.setWordSearch(e.target.value) }} />
-                            <button className="btn-search" onClick={() => {props.searchNew()}} onDragEnter={() => {props.searchNew()}}><i class="fas fa-search"></i></button>
+                            <button className="btn-search" onClick={() => {props.searchNew()}} onDragEnter={() => {props.searchNew()}}><i className="fas fa-search"></i></button>
                         </div>
                     </ul>
                 </div>

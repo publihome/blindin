@@ -38,11 +38,10 @@ function Economia(props) {
                                     type={typeNew}
                                     region={props.region}
                                     url={url}
-
                                 />
                             </div>
 
-                            <div className="col-lg-5 col-md-5 col-xl-5">
+                            <div className="col-lg-5 col-md-5 col-xl-5 p-1">
                                 <Newsterciarias
                                     type={typeNew}
                                     region={props.region}
